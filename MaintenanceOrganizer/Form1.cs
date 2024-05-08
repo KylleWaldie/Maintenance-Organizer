@@ -10,7 +10,7 @@ namespace MaintenanceOrganizer
         private void button1_Click(object sender, EventArgs e)
         {
             //todo: add multiple inputs from user
-            var dbManager = new DatabaseManager("PartsDatabase.db");
+            var dbManager = new DatabaseManager("PartsDatabase.db"); //creates a database if one doesnt exist
             dbManager.CreateDatabase();
 
             //Gets User Input for Part Name, Part Number, and Quantity
@@ -20,7 +20,14 @@ namespace MaintenanceOrganizer
             string quantityString = textBox3.Text;
             int quantity = int.Parse(quantityString);
 
-            dbManager.InsertData(partName, partNumberToUpper, quantity); //Inserts into the database
+            if (dbManager.GetPartNumber(partNumberToUpper))
+            {
+                dbManager.ChangeAmountData(partNumberToUpper, quantity);
+            }
+            else
+            {
+                dbManager.InsertData(partName, partNumberToUpper, quantity); //Inserts into the database
+            }
 
             listBox1.Items.Clear();// Clear the ListBox before adding new items
             var results = dbManager.QueryData(); //Variable to get the query data
@@ -29,7 +36,7 @@ namespace MaintenanceOrganizer
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
-            dbManager.ClearData();
+            //dbManager.ClearData();
         }
     }
 }

@@ -34,6 +34,7 @@ namespace MaintenanceOrganizer
             }
         }
 
+        // Inserts data into database
         public void InsertData(string partName, string partNumber, int amount)
         {
             using (var connection = new SqliteConnection(_connectionString))
@@ -51,6 +52,53 @@ namespace MaintenanceOrganizer
             }
         }
 
+        public bool GetPartNumber(string partNumber)
+        {
+            bool partNumberExist = false;
+
+            using (var connection = new SqliteConnection(_connectionString))
+            {
+                connection.Open();
+
+                // Query data from the table
+                using (var command = connection.CreateCommand())
+                {
+                    string query = $"SELECT COUNT(*) FROM PartsDatabase WHERE PartNumber = '{partNumber}'";
+                    command.CommandText = query;
+
+                    // Execute the query and retrieve the count
+                    object result = command.ExecuteScalar();
+                    int count = Convert.ToInt32(result);
+
+                    if (count > 0) 
+                        partNumberExist = true;
+                }
+
+                connection.Close();
+            }
+
+            return partNumberExist;
+        }
+
+        // Chages the amount of parts for a certain part
+        public void ChangeAmountData(string partNumber, int amountToAdd)
+        {
+            using (var connection = new SqliteConnection(_connectionString))
+            {
+                connection.Open();
+
+                // Change the part amount
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = $"UPDATE PartsDatabase SET Amount = Amount + '{amountToAdd}' WHERE partNumber = '{partNumber}'";
+                    command.ExecuteNonQuery();
+                }
+
+                connection.Close();
+            }
+        }
+
+        //Prints out the data
         public List<string> QueryData()
         {
             List<string> result = new List<string>();
@@ -87,6 +135,8 @@ namespace MaintenanceOrganizer
             return result;
         }
 
+
+        //Clears the database
         public void ClearData()
         {
             using (var connection = new SqliteConnection(_connectionString))
