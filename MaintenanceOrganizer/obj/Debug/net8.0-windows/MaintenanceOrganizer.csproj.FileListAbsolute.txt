@@ -40,3 +40,4 @@ C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\Maintenance
 C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.pdb
 C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.genruntimeconfig.cache
 C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\ref\MaintenanceOrganizer.dll
+C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.sourcelink.json

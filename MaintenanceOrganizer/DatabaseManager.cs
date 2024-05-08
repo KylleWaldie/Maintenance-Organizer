@@ -51,13 +51,15 @@ namespace MaintenanceOrganizer
             }
         }
 
-        public void QueryData()
+        public List<string> QueryData()
         {
+            List<string> result = new List<string>();
+
             using (var connection = new SqliteConnection(_connectionString))
             {
                 connection.Open();
 
-                // Example: Query data from the table
+                // Query data from the table
                 using (var command = connection.CreateCommand())
                 {
                     command.CommandText = "SELECT * FROM PartsDatabase";
@@ -66,17 +68,23 @@ namespace MaintenanceOrganizer
                         while (reader.Read())
                         {
                             var id = reader.GetInt32(0); // assuming the first column is an integer
-                            var partName = reader.GetString(1);// assuming the second column is a string
+                            var partName = reader.GetString(1); // assuming the second column is a string
                             var partNumber = reader.GetString(2);
                             var amount = reader.GetInt32(3);
 
-                            Console.WriteLine($"Id: {id}, Part Name: {partName}, Part Number: {partNumber}, Amount: {amount}");
+                            // Create a string representation of the row
+                            string row = $"Id: {id}, Part Name: {partName}, Part Number: {partNumber}, Amount: {amount}";
+
+                            // Add the string to the result collection
+                            result.Add(row);
                         }
                     }
                 }
 
                 connection.Close();
             }
+
+            return result;
         }
 
         public void ClearData()
@@ -85,7 +93,7 @@ namespace MaintenanceOrganizer
             {
                 connection.Open();
 
-                // Example: Insert data into the table
+                //Clears all data from database
                 using (var command = connection.CreateCommand())
                 {
                     command.CommandText = "DELETE FROM PartsDatabase";
