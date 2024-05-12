@@ -1,6 +1,6 @@
 ﻿namespace MaintenanceOrganizer
 {
-    partial class Form1
+    partial class ViewDataForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -53,7 +53,7 @@
             button1.Name = "button1";
             button1.Size = new Size(113, 23);
             button1.TabIndex = 1;
-            button1.Text = "button1";
+            button1.Text = "Add Product";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -105,7 +105,7 @@
             label3.TabIndex = 7;
             label3.Text = "Quantity";
             // 
-            // Form1
+            // ViewDataForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -118,7 +118,8 @@
             Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(listBox1);
-            Name = "Form1";
+            Name = "ViewDataForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();

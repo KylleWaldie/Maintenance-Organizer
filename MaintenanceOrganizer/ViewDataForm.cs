@@ -1,11 +1,16 @@
 namespace MaintenanceOrganizer
 {
-    public partial class Form1 : Form
+    public partial class ViewDataForm : Form
     {
-        public Form1()
+        public ViewDataForm()
         {
             InitializeComponent();
+            var dbManager = new DatabaseManager("PartsDatabase.db");
+            var results = dbManager.QueryData();
+            // Populate the ListBox with the query results
+            listBox1.Items.AddRange(results.ToArray());
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -20,6 +25,7 @@ namespace MaintenanceOrganizer
             string quantityString = textBox3.Text;
             int quantity = int.Parse(quantityString);
 
+            //Checks if part number already in database
             if (dbManager.GetPartNumber(partNumberToUpper))
             {
                 dbManager.ChangeAmountData(partNumberToUpper, quantity);
@@ -30,12 +36,15 @@ namespace MaintenanceOrganizer
             }
 
             listBox1.Items.Clear();// Clear the ListBox before adding new items
-            var results = dbManager.QueryData(); //Variable to get the query data
+            var newResults = dbManager.QueryData(); //Variable to get the query data
 
-            listBox1.Items.AddRange(results.ToArray()); //Outputs results to the list box.
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
+            listBox1.Items.AddRange(newResults.ToArray()); //Outputs results to the list box.
+
+            TextBox[] textBoxes = { textBox1, textBox2, textBox3 }; //Clears the text box
+            foreach (TextBox textBox in textBoxes)
+            {
+                textBox.Clear();
+            }
             //dbManager.ClearData();
         }
     }

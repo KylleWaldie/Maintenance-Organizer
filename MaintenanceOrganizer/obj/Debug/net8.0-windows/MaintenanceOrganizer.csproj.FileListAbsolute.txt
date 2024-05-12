@@ -28,7 +28,6 @@ C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\Maintenance
 C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\bin\Debug\net8.0-windows\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\bin\Debug\net8.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.csproj.AssemblyReference.cache
-C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.Form1.resources
 C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.csproj.GenerateResource.cache
 C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.AssemblyInfoInputs.cache
@@ -41,3 +40,5 @@ C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\Maintenance
 C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.genruntimeconfig.cache
 C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\ref\MaintenanceOrganizer.dll
 C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.sourcelink.json
+C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.ViewDataForm.resources
+C:\Users\wldky\OneDrive - Montana Tech\CSCI 332\MaintenanceOrganizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.MainMenuForm.resources
