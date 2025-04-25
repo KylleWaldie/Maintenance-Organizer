@@ -30,11 +30,12 @@
         {
             button1 = new Button();
             label1 = new Label();
+            button3 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(253, 213);
+            button1.Location = new Point(253, 222);
             button1.Name = "button1";
             button1.Size = new Size(222, 83);
             button1.TabIndex = 0;
@@ -51,12 +52,23 @@
             label1.TabIndex = 1;
             label1.Text = "Maintenance Department Parts Database";
             // 
+            // button3
+            // 
+            button3.Location = new Point(253, 331);
+            button3.Name = "button3";
+            button3.Size = new Size(222, 83);
+            button3.TabIndex = 0;
+            button3.Text = "Add and View Parts";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // MainMenuForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(764, 490);
+            Controls.Add(button3);
             Controls.Add(label1);
             Controls.Add(button1);
             Name = "MainMenuForm";
@@ -70,5 +82,6 @@
 
         private Button button1;
         private Label label1;
+        private Button button3;
     }
 }

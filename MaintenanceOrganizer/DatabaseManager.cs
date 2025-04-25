@@ -98,6 +98,23 @@ namespace MaintenanceOrganizer
             }
         }
 
+        public void DeleteData(string partNumber, int amountToDelete) 
+        {
+            using (var connection = new SqliteConnection(_connectionString))
+            {
+                connection.Open();
+
+                // Change the part amount
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = $"UPDATE PartsDatabase SET Amount = Amount - '{amountToDelete}' WHERE partNumber = '{partNumber}'";
+                    command.ExecuteNonQuery();
+                }
+
+                connection.Close();
+            }
+        }
+
         //Prints out the data
         public List<string> QueryData()
         {

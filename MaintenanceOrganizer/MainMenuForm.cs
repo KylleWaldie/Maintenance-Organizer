@@ -31,6 +31,18 @@ namespace MaintenanceOrganizer
             Hide();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Create an instance of the new form
+            if (viewDataForm == null)
+            {
+                viewDataForm = new ViewDataForm();
+                viewDataForm.FormClosed += mainMenu_FormClosed;
+            }
+            viewDataForm.Show(this);
+            Hide();
+        }
+
         void mainMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
             viewDataForm = null;

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a+Uvh6no6mr6HOcnsNCprmQUXQ5AFRgQJ9bhkES2WbT1Mf5/jjN6VWoW0KnFYlclqhbbWOg7l/cqGL5l+VDLLg==",
+  "dgSpecHash": "4Xo4SyZgal6HfeXB30OkGICEUkU+C9bYUamQkCKkGjha+eMTdXnEtiuJaqdD41xGpIxqL8Hxc/ENVDkk7im7WQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wldky\\OneDrive - Montana Tech\\CSCI 332\\MaintenanceOrganizer\\MaintenanceOrganizer\\MaintenanceOrganizer.csproj",
+  "projectFilePath": "C:\\Users\\wldky\\Source\\Repos\\Maintenance-Organizer\\MaintenanceOrganizer\\MaintenanceOrganizer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wldky\\.nuget\\packages\\microsoft.data.sqlite\\8.0.4\\microsoft.data.sqlite.8.0.4.nupkg.sha512",
     "C:\\Users\\wldky\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.4\\microsoft.data.sqlite.core.8.0.4.nupkg.sha512",

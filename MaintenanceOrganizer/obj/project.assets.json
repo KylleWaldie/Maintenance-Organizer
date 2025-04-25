@@ -329,11 +329,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wldky\\OneDrive - Montana Tech\\CSCI 332\\MaintenanceOrganizer\\MaintenanceOrganizer\\MaintenanceOrganizer.csproj",
+      "projectUniqueName": "C:\\Users\\wldky\\Source\\Repos\\Maintenance-Organizer\\MaintenanceOrganizer\\MaintenanceOrganizer.csproj",
       "projectName": "MaintenanceOrganizer",
-      "projectPath": "C:\\Users\\wldky\\OneDrive - Montana Tech\\CSCI 332\\MaintenanceOrganizer\\MaintenanceOrganizer\\MaintenanceOrganizer.csproj",
+      "projectPath": "C:\\Users\\wldky\\Source\\Repos\\Maintenance-Organizer\\MaintenanceOrganizer\\MaintenanceOrganizer.csproj",
       "packagesPath": "C:\\Users\\wldky\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wldky\\OneDrive - Montana Tech\\CSCI 332\\MaintenanceOrganizer\\MaintenanceOrganizer\\obj\\",
+      "outputPath": "C:\\Users\\wldky\\Source\\Repos\\Maintenance-Organizer\\MaintenanceOrganizer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wldky\\AppData\\Roaming\\NuGet\\NuGet.Config",

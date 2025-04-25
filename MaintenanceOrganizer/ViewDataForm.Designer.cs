@@ -1,4 +1,5 @@
-﻿namespace MaintenanceOrganizer
+﻿
+namespace MaintenanceOrganizer
 {
     partial class ViewDataForm
     {
@@ -36,6 +37,7 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            button2 = new Button();
             SuspendLayout();
             // 
             // listBox1
@@ -99,17 +101,28 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(110, 174);
+            label3.Location = new Point(105, 178);
             label3.Name = "label3";
             label3.Size = new Size(53, 15);
             label3.TabIndex = 7;
             label3.Text = "Quantity";
+            // 
+            // button2
+            // 
+            button2.Location = new Point(80, 351);
+            button2.Name = "button2";
+            button2.Size = new Size(113, 23);
+            button2.TabIndex = 8;
+            button2.Text = "Remove Part";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // ViewDataForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -125,6 +138,11 @@
             PerformLayout();
         }
 
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private ListBox listBox1;
@@ -135,5 +153,7 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private Button button2;
+        private Button button3;
     }
 }
