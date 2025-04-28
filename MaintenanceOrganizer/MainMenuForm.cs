@@ -14,6 +14,8 @@ namespace MaintenanceOrganizer
     public partial class MainMenuForm : Form
     {
         ViewDataForm viewDataForm;
+        DeleteData deleteDataForm;
+
         public MainMenuForm()
         {
             InitializeComponent();
@@ -36,10 +38,10 @@ namespace MaintenanceOrganizer
             // Create an instance of the new form
             if (viewDataForm == null)
             {
-                viewDataForm = new ViewDataForm();
-                viewDataForm.FormClosed += mainMenu_FormClosed;
+                deleteDataForm = new DeleteData();
+                deleteDataForm.FormClosed += mainMenu_FormClosed;
             }
-            viewDataForm.Show(this);
+            deleteDataForm.Show(this);
             Hide();
         }
 

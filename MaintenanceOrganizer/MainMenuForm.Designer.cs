@@ -58,7 +58,7 @@
             button3.Name = "button3";
             button3.Size = new Size(222, 83);
             button3.TabIndex = 0;
-            button3.Text = "Add and View Parts";
+            button3.Text = "Remove Parts";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
