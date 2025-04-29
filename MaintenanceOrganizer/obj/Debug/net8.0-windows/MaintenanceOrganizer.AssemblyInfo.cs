@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MaintenanceOrganizer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b334aedb4bc5f157fd67c8698297880a4d945ed0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9471412d8dd9fe11bc49ce906d00b033b2cb29a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("MaintenanceOrganizer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MaintenanceOrganizer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

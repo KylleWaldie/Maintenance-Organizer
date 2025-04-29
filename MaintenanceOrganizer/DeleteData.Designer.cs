@@ -58,13 +58,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(125, 27);
             textBox1.TabIndex = 2;
-            //
-            // textBox2
-            //
-            textBox2.location = new Point(128, 177);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 2;
             // 
             // button1
             // 
@@ -74,14 +67,13 @@
             button1.TabIndex = 3;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
-            button2.Click += button1_Click;
+
             // 
             // DeleteData
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(listBox1);
