@@ -85,5 +85,5 @@ C:\Users\wldky\Source\Repos\Maintenance-Organizer\MaintenanceOrganizer\obj\Debug
 C:\Users\wldky\Source\Repos\Maintenance-Organizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.pdb
 C:\Users\wldky\Source\Repos\Maintenance-Organizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.genruntimeconfig.cache
 C:\Users\wldky\Source\Repos\Maintenance-Organizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\ref\MaintenanceOrganizer.dll
-C:\Users\wldky\Source\Repos\Maintenance-Organizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\Maintena.41B6BBB0.Up2Date
 C:\Users\wldky\Source\Repos\Maintenance-Organizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.DeleteData.resources
+C:\Users\wldky\Source\Repos\Maintenance-Organizer\MaintenanceOrganizer\obj\Debug\net8.0-windows\MaintenanceOrganizer.csproj.CopyComplete

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             button1 = new Button();
             label1 = new Label();
             button3 = new Button();
@@ -35,9 +36,9 @@
             // 
             // button1
             // 
-            button1.Location = new Point(253, 222);
+            button1.Location = new Point(206, 137);
             button1.Name = "button1";
-            button1.Size = new Size(222, 83);
+            button1.Size = new Size(308, 113);
             button1.TabIndex = 0;
             button1.Text = "Add and View Parts";
             button1.UseVisualStyleBackColor = true;
@@ -46,7 +47,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(253, 166);
+            label1.Location = new Point(249, 104);
             label1.Name = "label1";
             label1.Size = new Size(222, 15);
             label1.TabIndex = 1;
@@ -54,9 +55,9 @@
             // 
             // button3
             // 
-            button3.Location = new Point(253, 331);
+            button3.Location = new Point(206, 268);
             button3.Name = "button3";
-            button3.Size = new Size(222, 83);
+            button3.Size = new Size(308, 113);
             button3.TabIndex = 0;
             button3.Text = "Remove Parts";
             button3.UseVisualStyleBackColor = true;
@@ -71,6 +72,7 @@
             Controls.Add(button3);
             Controls.Add(label1);
             Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainMenuForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Database Main Menu";

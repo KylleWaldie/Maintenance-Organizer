@@ -29,6 +29,7 @@ namespace MaintenanceOrganizer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewDataForm));
             listBox1 = new ListBox();
             button1 = new Button();
             textBox1 = new TextBox();
@@ -37,7 +38,6 @@ namespace MaintenanceOrganizer
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            button2 = new Button();
             SuspendLayout();
             // 
             // listBox1
@@ -51,9 +51,9 @@ namespace MaintenanceOrganizer
             // 
             // button1
             // 
-            button1.Location = new Point(80, 300);
+            button1.Location = new Point(106, 291);
             button1.Name = "button1";
-            button1.Size = new Size(113, 23);
+            button1.Size = new Size(146, 39);
             button1.TabIndex = 1;
             button1.Text = "Add Product";
             button1.UseVisualStyleBackColor = true;
@@ -61,21 +61,21 @@ namespace MaintenanceOrganizer
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(67, 77);
+            textBox1.Location = new Point(110, 122);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(138, 23);
             textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(67, 140);
+            textBox2.Location = new Point(110, 188);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(138, 23);
             textBox2.TabIndex = 3;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(67, 196);
+            textBox3.Location = new Point(110, 254);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(138, 23);
             textBox3.TabIndex = 4;
@@ -83,7 +83,7 @@ namespace MaintenanceOrganizer
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(105, 56);
+            label1.Location = new Point(148, 93);
             label1.Name = "label1";
             label1.Size = new Size(63, 15);
             label1.TabIndex = 5;
@@ -92,7 +92,7 @@ namespace MaintenanceOrganizer
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(99, 113);
+            label2.Location = new Point(142, 159);
             label2.Name = "label2";
             label2.Size = new Size(75, 15);
             label2.TabIndex = 6;
@@ -101,28 +101,17 @@ namespace MaintenanceOrganizer
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(105, 178);
+            label3.Location = new Point(153, 225);
             label3.Name = "label3";
             label3.Size = new Size(53, 15);
             label3.TabIndex = 7;
             label3.Text = "Quantity";
-            // 
-            // button2
-            // 
-            button2.Location = new Point(80, 351);
-            button2.Name = "button2";
-            button2.Size = new Size(113, 23);
-            button2.TabIndex = 8;
-            button2.Text = "Remove Part";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // ViewDataForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -131,9 +120,10 @@ namespace MaintenanceOrganizer
             Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(listBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ViewDataForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Add Data";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -153,7 +143,5 @@ namespace MaintenanceOrganizer
         private Label label1;
         private Label label2;
         private Label label3;
-        private Button button2;
-        private Button button3;
     }
 }

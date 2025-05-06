@@ -41,13 +41,15 @@ namespace MaintenanceOrganizer
             {
                 connection.Open();
 
-                // Example: Insert data into the table
                 using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = $"INSERT INTO PartsDatabase (PartName, PartNumber, Amount) VALUES ('{partName}', '{partNumber}', '{amount}')";
+                    command.CommandText = "INSERT INTO PartsDatabase (PartName, PartNumber, Amount) VALUES (@PartName, @PartNumber, @Amount)";
+                    command.Parameters.AddWithValue("@PartName", partName);
+                    command.Parameters.AddWithValue("@PartNumber", partNumber);
+                    command.Parameters.AddWithValue("@Amount", amount);
+
                     command.ExecuteNonQuery();
                 }
-
                 connection.Close();
             }
         }
@@ -60,18 +62,14 @@ namespace MaintenanceOrganizer
             {
                 connection.Open();
 
-                // Query data from the table
                 using (var command = connection.CreateCommand())
                 {
-                    string query = $"SELECT COUNT(*) FROM PartsDatabase WHERE PartNumber = '{partNumber}'";
-                    command.CommandText = query;
+                    command.CommandText = "SELECT COUNT(*) FROM PartsDatabase WHERE PartNumber = @PartNumber";
+                    command.Parameters.AddWithValue("@PartNumber", partNumber);
 
-                    // Execute the query and retrieve the count
                     object result = command.ExecuteScalar();
                     int count = Convert.ToInt32(result);
-
-                    if (count > 0) 
-                        partNumberExist = true;
+                    partNumberExist = count > 0;
                 }
 
                 connection.Close();
@@ -90,7 +88,9 @@ namespace MaintenanceOrganizer
                 // Change the part amount
                 using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = $"UPDATE PartsDatabase SET Amount = Amount + '{amountToAdd}' WHERE partNumber = '{partNumber}'";
+                    command.CommandText = "UPDATE PartsDatabase SET Amount = Amount + @AmountToAdd WHERE partNumber = @PartNumber";
+                    command.Parameters.AddWithValue("@AmountToAdd", amountToAdd);
+                    command.Parameters.AddWithValue("@PartNumber", partNumber);
                     command.ExecuteNonQuery();
                 }
 
@@ -107,8 +107,29 @@ namespace MaintenanceOrganizer
                 // Change the part amount
                 using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = $"UPDATE PartsDatabase SET Amount = Amount - '{amountToDelete}' WHERE partNumber = '{partNumber}'";
+                    command.CommandText = "UPDATE PartsDatabase SET Amount = Amount - @AmountToDelete WHERE partNumber = @PartNumber";
+                    command.Parameters.AddWithValue("@AmountToDelete", amountToDelete);
+                    command.Parameters.AddWithValue("@PartNumber", partNumber);
                     command.ExecuteNonQuery();
+                }
+
+                // Check the updated amount
+                using (var selectCommand = connection.CreateCommand())
+                {
+                    selectCommand.CommandText = "SELECT Amount FROM PartsDatabase WHERE partNumber = @PartNumber";
+                    selectCommand.Parameters.AddWithValue("@PartNumber", partNumber);
+                    var result = selectCommand.ExecuteScalar();
+
+                    if (result != null && Convert.ToInt32(result) <= 0)
+                    {
+                        // Delete the part if amount is 0 or less
+                        using (var deleteCommand = connection.CreateCommand())
+                        {
+                            deleteCommand.CommandText = "DELETE FROM PartsDatabase WHERE partNumber = @PartNumber";
+                            deleteCommand.Parameters.AddWithValue("@PartNumber", partNumber);
+                            deleteCommand.ExecuteNonQuery();
+                        }
+                    }
                 }
 
                 connection.Close();
