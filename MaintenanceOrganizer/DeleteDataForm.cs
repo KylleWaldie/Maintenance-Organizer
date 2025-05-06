@@ -12,9 +12,9 @@ using TextBox = System.Windows.Forms.TextBox;
 
 namespace MaintenanceOrganizer
 {
-    public partial class DeleteData : Form
+    public partial class DeleteDataForm : Form
     {
-        public DeleteData()
+        public DeleteDataForm()
         {
             InitializeComponent();
             var dbManager = new DatabaseManager("PartsDatabase.db");

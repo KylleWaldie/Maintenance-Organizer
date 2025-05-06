@@ -7,19 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.DataFormats;
 
 namespace MaintenanceOrganizer
 {
-    public partial class MainMenuForm : Form
+    public partial class ViewDatabaseForm : Form
     {
+
         AddDataForm addDataForm;
         DeleteDataForm deleteDataForm;
-        ViewDatabaseForm viewDatabaseForm;
 
-        public MainMenuForm()
+        public ViewDatabaseForm()
         {
             InitializeComponent();
+            RefreshData(); // Load initially
+
+            this.Activated += (s, e) => RefreshData(); // Reload when the form is re-activated
+        }
+
+        private void RefreshData()
+        {
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
+
+            var dbManager = new DatabaseManager("PartsDatabase.db");
+
+            var results = dbManager.QueryData();
+            listBox1.Items.AddRange(results.ToArray());
+
+            var warnings = dbManager.LowItemError();
+            listBox2.Items.AddRange(warnings.ToArray());
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,19 +51,6 @@ namespace MaintenanceOrganizer
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            // Create an instance of the new form
-            if (viewDatabaseForm == null)
-            {
-                viewDatabaseForm = new ViewDatabaseForm();
-                viewDatabaseForm.FormClosed += viewDatabaseForm_FormClosed;
-            }
-
-            viewDatabaseForm.Show(this);
-            Hide();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
         {
             // Create an instance of the new form
             if (deleteDataForm == null)
@@ -69,17 +72,6 @@ namespace MaintenanceOrganizer
         {
             deleteDataForm = null;
             Show();
-        }
-
-        void viewDatabaseForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            viewDatabaseForm = null;
-            Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace MaintenanceOrganizer
 {
-    partial class ViewDataForm
+    partial class AddDataForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@ namespace MaintenanceOrganizer
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewDataForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddDataForm));
             listBox1 = new ListBox();
             button1 = new Button();
             textBox1 = new TextBox();
@@ -107,10 +107,11 @@ namespace MaintenanceOrganizer
             label3.TabIndex = 7;
             label3.Text = "Quantity";
             // 
-            // ViewDataForm
+            // AddDataForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -121,7 +122,7 @@ namespace MaintenanceOrganizer
             Controls.Add(button1);
             Controls.Add(listBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "ViewDataForm";
+            Name = "AddDataForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Add Data";
             ResumeLayout(false);

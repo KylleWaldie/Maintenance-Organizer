@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Microsoft.Data.Sqlite;
 
 namespace MaintenanceOrganizer
@@ -171,6 +172,39 @@ namespace MaintenanceOrganizer
             }
 
             return result;
+        }
+
+        public List<string> LowItemError()
+        {
+            var warnings = new List<string>();
+
+            using (var connection = new SqliteConnection(_connectionString))
+            {
+                connection.Open();
+
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "SELECT PartName, PartNumber, Amount FROM PartsDatabase WHERE Amount <= @Threshold";
+                    command.Parameters.AddWithValue("@Threshold", 3);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string partName = reader.GetString(0);
+                            string partNumber = reader.GetString(1);
+                            int amount = reader.GetInt32(2);
+
+                            string warning = $"Warning: {partName} (#{partNumber}) is low: {amount} left.";
+                            warnings.Add(warning);
+                        }
+                    }
+                }
+
+                connection.Close();
+            }
+
+            return warnings;
         }
 
 

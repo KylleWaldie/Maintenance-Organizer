@@ -1,8 +1,8 @@
 namespace MaintenanceOrganizer
 {
-    public partial class ViewDataForm : Form
+    public partial class AddDataForm : Form
     {
-        public ViewDataForm()
+        public AddDataForm()
         {
             InitializeComponent();
             var dbManager = new DatabaseManager("PartsDatabase.db");

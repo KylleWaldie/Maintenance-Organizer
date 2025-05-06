@@ -1,6 +1,6 @@
 ﻿namespace MaintenanceOrganizer
 {
-    partial class DeleteData
+    partial class DeleteDataForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteData));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteDataForm));
             listBox1 = new ListBox();
             label1 = new Label();
             textBox1 = new TextBox();
@@ -90,10 +90,11 @@
             textBox3.Size = new Size(181, 23);
             textBox3.TabIndex = 5;
             // 
-            // DeleteData
+            // DeleteDataForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
             Controls.Add(textBox3);
             Controls.Add(label2);
@@ -103,7 +104,7 @@
             Controls.Add(listBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
-            Name = "DeleteData";
+            Name = "DeleteDataForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Delete Data";
             ResumeLayout(false);
